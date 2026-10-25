@@ -1,0 +1,180 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Mini Ground Station | UBP Karawang</title>
+
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <div class="dashboard">
+      <!-- Sidebar -->
+      <aside class="sidebar">
+        <div class="brand">
+          <h2>UBP<span>GROUND</span></h2>
+          <p>Mini Ground Station</p>
+        </div>
+
+        <nav class="navigation">
+          <a href="#overview" class="nav-link active">Overview</a>
+          <a href="#satellite-info" class="nav-link">Satellite Tracking</a>
+          <a href="#signal-monitoring" class="nav-link">Signal Monitoring</a>
+          <a href="#observation-history" class="nav-link"
+            >Observation History</a
+          >
+          <a href="#processed-data" class="nav-link">Data Archive</a>
+        </nav>
+
+        <div class="sidebar-footer">
+          <p>Kelompok 6</p>
+          <small>Dashboard Team</small>
+        </div>
+      </aside>
+
+      <!-- Konten utama -->
+      <main class="main-content">
+        <header class="topbar">
+          <div>
+            <h1>Ground Station Dashboard</h1>
+            <p>Satellite monitoring system — UBP Karawang</p>
+          </div>
+
+          <div class="system-status" id="api-status">
+            <span class="status-dot" id="api-status-dot"></span>
+            <span id="api-status-text">Memeriksa konfigurasi API...</span>
+          </div>
+        </header>
+
+        <!-- Overview -->
+        <section id="overview">
+          <div class="section-heading">
+            <h2>Overview</h2>
+            <p>Ringkasan sistem pemantauan satelit.</p>
+          </div>
+
+          <div class="summary-grid">
+            <article class="summary-card">
+              <p>Satellite Target</p>
+              <h3 id="satellite-name">Belum tersedia</h3>
+              <small>Target pengamatan</small>
+            </article>
+
+            <article class="summary-card">
+              <p>Next Satellite Pass</p>
+              <h3 id="next-pass">Belum tersedia</h3>
+              <small>Jadwal lintasan berikutnya</small>
+            </article>
+
+            <article class="summary-card">
+              <p>Signal Status</p>
+              <h3 id="signal-status">Belum diketahui</h3>
+              <small>Status penerimaan sinyal</small>
+            </article>
+
+            <article class="summary-card">
+              <p>Signal Quality</p>
+              <h3 id="signal-quality">Belum tersedia</h3>
+              <small>SNR jika tersedia</small>
+            </article>
+          </div>
+        </section>
+
+        <!-- Satellite tracking -->
+        <section id="satellite-info" class="content-panel">
+          <div class="section-heading">
+            <h2>Satellite Tracking</h2>
+            <p>Informasi lintasan dan posisi satelit.</p>
+          </div>
+
+          <div class="tracking-grid">
+            <div class="info-box">
+              <span>Waktu Pass</span>
+              <strong id="pass-time">Belum tersedia</strong>
+            </div>
+
+            <div class="info-box">
+              <span>Azimuth</span>
+              <strong id="azimuth">Belum tersedia</strong>
+            </div>
+
+            <div class="info-box">
+              <span>Elevation</span>
+              <strong id="elevation">Belum tersedia</strong>
+            </div>
+
+            <div class="info-box">
+              <span>Frequency / Mode</span>
+              <strong id="frequency-mode">Belum tersedia</strong>
+            </div>
+          </div>
+        </section>
+
+        <!-- Signal monitoring -->
+        <section id="signal-monitoring" class="content-panel">
+          <div class="section-heading">
+            <h2>Signal Monitoring</h2>
+            <p>Area informasi penerimaan sinyal radio.</p>
+          </div>
+
+          <div class="monitoring-placeholder">
+            <h3>Spectrum / Waterfall Monitoring</h3>
+            <p>
+              Visualisasi sinyal akan diintegrasikan dengan perangkat atau
+              software monitoring.
+            </p>
+          </div>
+        </section>
+
+        <!-- Observation history -->
+        <section id="observation-history" class="content-panel">
+          <div class="section-heading">
+            <h2>Observation History</h2>
+            <p>Riwayat pengamatan satelit.</p>
+          </div>
+
+          <div class="table-wrapper">
+            <table>
+              <thead>
+                <tr>
+                  <th>Waktu</th>
+                  <th>Satelit</th>
+                  <th>Status</th>
+                  <th>Hasil</th>
+                </tr>
+              </thead>
+
+              <tbody id="observation-table">
+                <tr>
+                  <td colspan="4">Belum ada data pengamatan.</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        <!-- Processed data -->
+        <section id="processed-data" class="content-panel">
+          <div class="section-heading">
+            <h2>Processed Data Archive</h2>
+            <p>Arsip hasil pemrosesan data satelit.</p>
+          </div>
+
+          <div id="archive-list" class="archive-placeholder">
+            Arsip akan ditampilkan setelah data tersedia.
+          </div>
+        </section>
+
+        <footer class="page-footer">
+          <p>
+            Mini Ground Station RTL-SDR | Universitas Buana Perjuangan Karawang
+          </p>
+        </footer>
+      </main>
+    </div>
+
+    <script src="js/main.js"></script>
+    <script src="js/api.js"></script>
+  </body>
+</html>
